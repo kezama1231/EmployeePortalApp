@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f8fb;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.filter-row {
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 520px;
+}
+
+.field-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.page-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.centered-block {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.message-block {
+  margin-bottom: 16px;
+}
+
+.detail-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.muted-text {
+  color: #667085;
+}

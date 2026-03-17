@@ -1,0 +1,26 @@
+INSERT INTO employee (
+    name,
+    contact_number,
+    department,
+    email,
+    job_title,
+    created_at,
+    modified_at,
+    created_by,
+    modified_by
+) VALUES
+    ('Alicia Gomez', '555-0101', 'HR', 'alicia.gomez@company.com', 'HR Manager', TIMESTAMP '2026-03-16 09:00:00', TIMESTAMP '2026-03-16 09:00:00', 'system', 'system'),
+    ('Brian Lee', '555-0102', 'HR', 'brian.lee@company.com', 'Recruitment Specialist', TIMESTAMP '2026-03-16 09:05:00', TIMESTAMP '2026-03-16 09:05:00', 'system', 'system'),
+    ('Chloe Martin', '555-0103', 'HR', 'chloe.martin@company.com', 'People Operations Analyst', TIMESTAMP '2026-03-16 09:10:00', TIMESTAMP '2026-03-16 09:10:00', 'system', 'system'),
+    ('Daniel Wright', '555-0104', 'HR', 'daniel.wright@company.com', 'Compensation Coordinator', TIMESTAMP '2026-03-16 09:15:00', TIMESTAMP '2026-03-16 09:15:00', 'system', 'system'),
+    ('Ethan Brooks', '555-0201', 'IT', 'ethan.brooks@company.com', 'Software Engineer', TIMESTAMP '2026-03-16 09:20:00', TIMESTAMP '2026-03-16 09:20:00', 'system', 'system'),
+    ('Fatima Khan', '555-0202', 'IT', 'fatima.khan@company.com', 'Frontend Developer', TIMESTAMP '2026-03-16 09:25:00', TIMESTAMP '2026-03-16 09:25:00', 'system', 'system'),
+    ('Gabriel Chen', '555-0203', 'IT', 'gabriel.chen@company.com', 'DevOps Engineer', TIMESTAMP '2026-03-16 09:30:00', TIMESTAMP '2026-03-16 09:30:00', 'system', 'system'),
+    ('Hannah Patel', '555-0204', 'IT', 'hannah.patel@company.com', 'IT Support Lead', TIMESTAMP '2026-03-16 09:35:00', TIMESTAMP '2026-03-16 09:35:00', 'system', 'system'),
+    ('Isaac Turner', '555-0301', 'Finance', 'isaac.turner@company.com', 'Financial Analyst', TIMESTAMP '2026-03-16 09:40:00', TIMESTAMP '2026-03-16 09:40:00', 'system', 'system'),
+    ('Jasmine Rivera', '555-0302', 'Finance', 'jasmine.rivera@company.com', 'Accountant', TIMESTAMP '2026-03-16 09:45:00', TIMESTAMP '2026-03-16 09:45:00', 'system', 'system'),
+    ('Kevin Murphy', '555-0303', 'Finance', 'kevin.murphy@company.com', 'Payroll Specialist', TIMESTAMP '2026-03-16 09:50:00', TIMESTAMP '2026-03-16 09:50:00', 'system', 'system'),
+    ('Lina Hassan', '555-0304', 'Finance', 'lina.hassan@company.com', 'Finance Manager', TIMESTAMP '2026-03-16 09:55:00', TIMESTAMP '2026-03-16 09:55:00', 'system', 'system'),
+    ('Marcus Evans', '555-0401', 'Operations', 'marcus.evans@company.com', 'Operations Manager', TIMESTAMP '2026-03-16 10:00:00', TIMESTAMP '2026-03-16 10:00:00', 'system', 'system'),
+    ('Nina Silva', '555-0402', 'Operations', 'nina.silva@company.com', 'Logistics Coordinator', TIMESTAMP '2026-03-16 10:05:00', TIMESTAMP '2026-03-16 10:05:00', 'system', 'system'),
+    ('Owen Parker', '555-0403', 'Operations', 'owen.parker@company.com', 'Process Improvement Analyst', TIMESTAMP '2026-03-16 10:10:00', TIMESTAMP '2026-03-16 10:10:00', 'system', 'system');
