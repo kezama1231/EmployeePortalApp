@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import { Message } from 'primereact/message';
 import { ProgressSpinner } from 'primereact/progressspinner';
+import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
 import { EmployeeService } from "../api/employeeApi";
 
 export default function EmployeeDetailsPage() {
 
     const { id } = useParams();
+    const navigate = useNavigate();
     const [employee, setEmployee] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
@@ -30,18 +32,21 @@ export default function EmployeeDetailsPage() {
         fetchData();
     }, [id])
 
-    const handleDelete = async () => {
-        const confirm = window.confirm("Before that!! Are you sure to delete ?");
-        if (!confirm) {
-            return;
-        }
-
-        try {
-            await EmployeeService.deleteEmployee(id);
-            Navigate("/")
-        } catch (err) {
-            setError('Failed to delete employee.');
-        }
+    const handleDelete = () => {
+        confirmDialog({
+            message: "Before that!! Are you sure to delete ?",
+            header: "Delete Employee",
+            icon: "pi pi-exclamation-triangle",
+            acceptClassName: "p-button-danger",
+            accept: async () => {
+                try {
+                    await EmployeeService.deleteEmployee(id);
+                    navigate("/");
+                } catch (err) {
+                    setError('Failed to delete employee.');
+                }
+            },
+        });
     }
 
     if (loading) {
@@ -61,6 +66,7 @@ export default function EmployeeDetailsPage() {
 
     return (
         <Card title={"Employee Details"}>
+            <ConfirmDialog />
             <div className="detail-grid">
                 <div><strong>ID:</strong> {employee.employeeId}</div>
                 <div><strong>Name:</strong> {employee.name}</div>
