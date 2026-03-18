@@ -57,7 +57,7 @@ export default function EmployeeListPage() {
     }
 
     return (
-        <Card title="Employee List">
+        <Card title="Employee List" className="page-card">
             <ConfirmDialog />
             <DepartmentFilter
                 department={department}
@@ -84,5 +84,5 @@ export default function EmployeeListPage() {
                 <EmployeeTable employees={employees} onDelete={handleDelete} />
             )}
         </Card>
-    )
+    );
 }

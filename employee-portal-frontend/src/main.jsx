@@ -6,7 +6,6 @@ import App from './App.jsx'
 
 import 'primereact/resources/themes/lara-light-cyan/theme.css';
 import 'primeicons/primeicons.css';
-import './app.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

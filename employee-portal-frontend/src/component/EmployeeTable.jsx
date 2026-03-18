@@ -6,17 +6,30 @@ import { Button } from 'primereact/button';
 export default function EmployeeTable({ employees, onDelete }) {
     const actionBodyTemplate = (rowData) => {
         return (
-            <div className="table-actions">
+            <div className="table-actions table-actions-compact">
                 <Link to={`/employees/${rowData.employeeId}`}>
-                    <Button label={"View"} size="small" outlined />
+                    <Button
+                        label={"View"}
+                        icon="pi pi-eye"
+                        size="small"
+                        outlined
+                        className="action-btn action-btn-view"
+                    />
                 </Link>
                 <Link to={`/employees/${rowData.employeeId}/edit`}>
-                    <Button label={"Edit"} size="small" />
+                    <Button
+                        label={"Edit"}
+                        icon="pi pi-pencil"
+                        size="small"
+                        className="action-btn action-btn-edit"
+                    />
                 </Link>
                 <Button
                     label="Delete"
+                    icon="pi pi-trash"
                     size="small"
                     severity="danger"
+                    className="action-btn action-btn-delete"
                     onClick={() => onDelete(rowData.employeeId)}
                 />
             </div>
@@ -26,6 +39,7 @@ export default function EmployeeTable({ employees, onDelete }) {
 
     return (
         <DataTable
+            className="employee-table"
             value={employees || []}
             stripedRows
             rows={15}
@@ -41,5 +55,5 @@ export default function EmployeeTable({ employees, onDelete }) {
             <Column field="department" header="Department" />
             <Column header="Actions" body={actionBodyTemplate} />
         </DataTable>
-    )
+    );
 }

@@ -14,11 +14,11 @@ export default function CreateEmployeePage() {
     };
 
     return (
-        <Card label="Create Employee">
+        <Card title="Create Employee" className="page-card">
             <EmployeeForm
                 onSubmit={handleCreateEmployee}
                 submitLabel="Create Employee"
             />
         </Card>
-    )
+    );
 }

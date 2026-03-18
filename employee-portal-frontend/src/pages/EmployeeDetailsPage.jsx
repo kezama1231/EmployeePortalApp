@@ -65,7 +65,7 @@ export default function EmployeeDetailsPage() {
     }
 
     return (
-        <Card title={"Employee Details"}>
+        <Card title={"Employee Details"} className="page-card">
             <ConfirmDialog />
             <div className="detail-grid">
                 <div><strong>ID:</strong> {employee.employeeId}</div>
@@ -89,5 +89,5 @@ export default function EmployeeDetailsPage() {
                 <Button label="Delete" severity="danger" onClick={handleDelete} />
             </div>
         </Card>
-    )
+    );
 }

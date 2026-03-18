@@ -12,7 +12,7 @@ export default function EditEmployeePage() {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [initialData, setInitialData] = useState(null);
 
@@ -34,13 +34,13 @@ export default function EditEmployeePage() {
             } finally {
                 setLoading(false);
             }
-        }
-        fetchData
-    }, [id])
+        };
+        fetchData();
+    }, [id]);
 
     const handleUpdateEmployee = async (formData) => {
         await EmployeeService.updateEmployee(id, formData);
-        navigate(`/employees/`);
+        navigate(`/`);
     }
 
     if (loading) {
@@ -57,12 +57,12 @@ export default function EditEmployeePage() {
 
 
     return (
-        <Card title="Edit Employee">
+        <Card title="Edit Employee" className="page-card">
             <EmployeeForm
                 initialValues={initialData}
                 onSubmit={handleUpdateEmployee}
                 submitLabel="Update Employee"
             />
         </Card>
-    )
+    );
 }

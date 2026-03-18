@@ -10,16 +10,17 @@ const departmentOptions = [
 export default function DepartmentFilter({ department, onDepartmentChange }) {
     return (
         <div className="filter-row">
-            <label>Department</label>
-            <Dropdown 
+            <label htmlFor="departmentFilter" className="field-label">Department</label>
+            <Dropdown
+                inputId="departmentFilter"
                 value={department}
-                onChange={(e) => onDepartmentChange(e.value)} 
-                options={departmentOptions} 
+                onChange={(e) => onDepartmentChange(e.value)}
+                options={departmentOptions}
                 optionLabel="label"
                 optionValue="value"
-                placeholder="Select Dept." 
-                className="" 
+                placeholder="Select department"
+                className="filter-dropdown"
             />
         </div>
-    )
+    );
 }
