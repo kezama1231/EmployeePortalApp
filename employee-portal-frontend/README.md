@@ -1,16 +1,80 @@
-# React + Vite
+# Employee Portal Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is the frontend for the Employee Portal Application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+It is built with React and Vite and provides the user interface for the employee CRUD flows:
 
-## React Compiler
+- list employees by department
+- view employee details
+- create employees
+- edit employees
+- delete employees
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Requirements
 
-## Expanding the ESLint configuration
+Before installing this frontend locally, make sure you have the following:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js `24.13.1` recommended
+- npm `11.8.0` recommended
+
+If you prefer a safer compatibility target, using a recent Node.js LTS version is also reasonable, but this project was validated locally with the versions above.
+
+## Important Libraries Used
+
+These are the main frontend libraries worth calling out:
+
+- `axios`
+  Used for API communication with the Spring Boot backend.
+- `react-router-dom`
+  Used for client-side routing between list, details, create, and edit pages.
+- `primereact`
+  Used as the component library for forms, cards, data tables, dialogs, buttons, and UI structure.
+- `primeicons`
+  Used for icon support within PrimeReact components.
+
+## Installation
+
+1. Clone or pull the repository.
+2. Open a terminal in the frontend folder:
+
+```bash
+cd employee-portal-frontend
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+## Running the Frontend
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+The frontend runs on the default Vite development server, which is typically:
+
+```text
+http://localhost:5173
+```
+
+## Backend Dependency
+
+This frontend depends on the backend API being available locally.
+
+The API base URL currently points to:
+
+```text
+http://localhost:8080/api/employees
+```
+
+Before testing the full app, make sure the backend project is installed and running.
+
+For backend setup, go to:
+
+- [`../EmployeePortalApp/README.md`](../EmployeePortalApp/README.md)
